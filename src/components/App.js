@@ -6,14 +6,15 @@ const App = () => {
   const a = document.getElementById('counter').innerHTML;
   const b=parseInt(a)+1;
    document.getElementById('counter').innerHTML=b;
-  if(b%3===0){
-    setState("fizz");
+   if(b%3===0 && b%5===0){
+    setState("fizzbuzz");
   }
+  
   else if(b%5===0){
     setState("buzz")
   }
-  else if(b%3===0 && b%5===0){
-    setState("fizzbuzz");
+  else if(b%3===0){
+    setState("fizz");
   }
   else{
     setState('normal');
