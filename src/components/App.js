@@ -3,8 +3,9 @@ import '../styles/App.css';
 const App = () => {
   let [state, setState] = useState('normal');
  const inc =()=>{
-  let a = document.getElementById('counter').innerHTML;
-  let b=parseInt(a)+1;
+  const a = document.getElementById('counter').innerHTML;
+  const b=parseInt(a)+1;
+   document.getElementById('counter').innerHTML=b;
   if(b%3===0){
     setState("fizz");
   }
@@ -19,8 +20,9 @@ const App = () => {
   }
   }
   const dec =()=>{
-    let a = document.getElementById('counter').innerHTML;
-    let b=parseInt(a)-1;
+    const a = document.getElementById('counter').innerHTML;
+    const b=parseInt(a)-1;
+    document.getElementById('counter').innerHTML=b;
     if(b%3===0){
       setState("fizz");
     }
